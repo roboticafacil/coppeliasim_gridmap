@@ -1,0 +1,11 @@
+.qmake.stash
+Makefile
+*.o
+Makefile.Debug
+Makefile.Release
+object_script.*.Debug
+object_script.*.Release
+debug/
+release/
+*.pro.user
+*.user
