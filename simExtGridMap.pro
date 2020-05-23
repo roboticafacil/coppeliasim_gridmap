@@ -40,10 +40,12 @@ win32 {
 
 macx {
     DEFINES += MAC_SIM
+    LIBS+= -lm -lpthread -lX11
 }
 
 unix:!macx {
     DEFINES += LIN_SIM
+    LIBS+= -lm -lpthread -lX11
 }
 
 unix:!symbian {
@@ -66,10 +68,11 @@ HEADERS += \
     ./include/stack/stackObject.h \
     ./include/simLib.h \
     ./CImg.h \
-    ./worker.h \
+    ./Worker.h \
     ./gridmap/gridmap.h
 
 SOURCES += \
+    Worker.cpp \
     simExtGridMap.cpp \
     ./common/stack/stackBool.cpp \
     ./common/stack/stackNull.cpp \
@@ -79,5 +82,4 @@ SOURCES += \
     ./common/stack/stackMap.cpp \
     ./common/stack/stackObject.cpp \
     ./common/simLib.cpp \
-    gridmap.cc \
-    worker.cpp
+    gridmap.cc

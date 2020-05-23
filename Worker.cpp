@@ -1,4 +1,4 @@
-#include "worker.h"
+#include "Worker.h"
 #include <stdio.h>
 #include <iostream>
 #include <QThread>
