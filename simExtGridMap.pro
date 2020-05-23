@@ -40,7 +40,8 @@ win32 {
 
 macx {
     DEFINES += MAC_SIM
-    LIBS+= -lm -lpthread -lX11
+    INCLUDEPATH+= "/opt/X11/include"
+    LIBS+= -L"/opt/X11/lib" -lm -lpthread -lX11
 }
 
 unix:!macx {
